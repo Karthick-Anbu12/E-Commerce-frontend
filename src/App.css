@@ -1,0 +1,116 @@
+
+.phrase{
+    font-family:Playfair Display;
+
+}
+.phrase1{
+    font-size: 25px;
+    font-style:italic;
+}
+   
+.background{
+   background-color: #e0dddd;
+   height: auto;
+}
+.shoppingcart{
+    height: 100vh;
+}
+.login{
+    background-color: none;
+    height: 50vh;
+    width: 130vh;
+   
+    
+}
+.hovereff:hover{
+    -webkit-box-shadow: 0px 0px 46px 8px rgba(0,0,0,0.81);
+    -moz-box-shadow: 0px 0px 46px 8px rgba(0,0,0,0.81);
+    box-shadow: 0px 0px 46px 8px rgba(0,0,0,0.81);
+}
+
+.cont{
+    height: 100vh;
+    background: rgb(0,30,51);
+    background: linear-gradient(140deg, rgba(0,30,51,1) 0%, rgba(27,80,122,1) 50%, rgba(0,30,48,1) 100%);
+    
+}
+.search{
+    position: relative;
+}
+.cart{
+    fill:rgb(255, 255, 255);
+}
+.cart:hover{
+    fill:black
+}
+.fltimg{
+    height: 300px;
+}
+.Card{
+    text-decoration: none;
+}
+.adminbutton{
+    text-decoration: none;
+    padding: 10px
+}
+.arrow{
+    rotate: 90deg;
+}
+
+
+.dropbtn {
+    color: rgb(0, 0, 0);
+  }
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color:rgba(255, 255, 255,0.75);
+    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+    z-index: 1;} 
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+
+.admin{
+    margin-top: 150px;
+    height: 25rem;
+    width: 25rem;
+}
+.adminnav{
+    width: 300px;
+    height: 100cqmax
+}
+.productcard:hover{
+    box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+    -moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+}
+
+.weblogo{
+    text-decoration: none;
+    font-family:cursive;
+    color: white;
+}
+.hometext{
+    text-decoration: none;
+    color: white;
+}
+.weblogo:hover{
+    color: black;
+}
+.hometext:hover{
+    color: black;
+}
+.hometext:focus{
+    color: black;
+}
+.signin:hover{
+    box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+    -webkit-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+    -moz-box-shadow: 0px 0px 43px -9px rgba(0,0,0,0.83);
+
+}
