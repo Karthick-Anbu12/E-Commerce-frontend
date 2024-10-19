@@ -32,7 +32,7 @@ function Productsform() {
         },
         onSubmit:async(values)=>{
             console.log(values)
-            await axios.post("http://localhost:3000/add-product",values,{headers: {
+            await axios.post("https://e-commerce-back-end-avek.onrender.com/add-product",values,{headers: {
                 Authorization: window.localStorage.getItem("mytoken")}
               })
          navigate('/adminpage')   

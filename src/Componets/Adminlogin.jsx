@@ -22,7 +22,7 @@ function Adminlogin() {
         },
         onSubmit: async (values) => {
             try {
-                const response = await axios.post("http://localhost:3000/admin-login", values)
+                const response = await axios.post("https://e-commerce-back-end-avek.onrender.com/admin-login", values)
                 if (response.status == 200)
                     window.localStorage.setItem("mytoken", response.data.message)
                 navigate('/adminpage')

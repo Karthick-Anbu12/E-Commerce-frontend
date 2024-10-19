@@ -9,7 +9,7 @@ function Productinfo() {
   const [info, setinfo] = useState([])
   const getdata = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/productinfo/${params.id}`, {
+      const res = await axios.get(`https://e-commerce-back-end-avek.onrender.com/productinfo/${params.id}`, {
         headers: {
           Authorization: window.localStorage.getItem("mytoken")
         }

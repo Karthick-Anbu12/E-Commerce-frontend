@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 function Seller() {
   const [sellers,setseller]=useState([])
   const getdata=async()=>{
-   const info=await axios.get("http://localhost:3000/seller-info",{headers: {
+   const info=await axios.get("https://e-commerce-back-end-avek.onrender.com/seller-info",{headers: {
     Authorization: window.localStorage.getItem("mytoken")
   }})
    setseller(info.data)
   }
   const deleteseller=async(values)=>{
-    await axios.post("http://localhost:3000/delete-seller",values,{headers: {
+    await axios.post("https://e-commerce-back-end-avek.onrender.com/delete-seller",values,{headers: {
       Authorization: window.localStorage.getItem("mytoken")}
     })
   }

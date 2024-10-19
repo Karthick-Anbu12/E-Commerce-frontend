@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
   const [search, setsearch] = useState("")
 
   const getdata = async () => {
-    const product = await axios.get("http://localhost:3000/products")
+    const product = await axios.get("https://e-commerce-back-end-avek.onrender.com/products")
     setdatas(product.data)
   }
   const methodSearch = () => {
@@ -30,7 +30,7 @@ export const UserProvider = ({ children }) => {
   }
   const additem = async (data) => {
     try {
-      await axios.post("http://localhost:3000/addtocart", data, {
+      await axios.post("https://e-commerce-back-end-avek.onrender.com/addtocart", data, {
         headers: {
           Authorization: window.localStorage.getItem("mytoken")
         }
@@ -49,7 +49,7 @@ export const UserProvider = ({ children }) => {
       setcart([...cart])
       settotal(0)
       try {
-        await axios.post("http://localhost:3000/removefromcart", cart, {
+        await axios.post("https://e-commerce-back-end-avek.onrender.com/removefromcart", cart, {
           headers: {
             Authorization: window.localStorage.getItem("mytoken")
           }
@@ -64,7 +64,7 @@ export const UserProvider = ({ children }) => {
     cart.splice(index, 1)
     setcart([...cart])
     try {
-      await axios.post("http://localhost:3000/removefromcart", cart, {
+      await axios.post("https://e-commerce-back-end-avek.onrender.com/removefromcart", cart, {
         headers: {
           Authorization: window.localStorage.getItem("mytoken")
         }
@@ -75,7 +75,7 @@ export const UserProvider = ({ children }) => {
   }
   }
   const getuser = async () => {
-    const users = await axios.get("http://localhost:3000/user-info", {
+    const users = await axios.get("https://e-commerce-back-end-avek.onrender.com/user-info", {
       headers: {
         Authorization: window.localStorage.getItem("mytoken")
       }

@@ -5,14 +5,14 @@ function Productinformation() {
   const [products, setproducts] = useState([])
 
   const getdata = async () => {
-    const info = await axios.get("http://localhost:3000/products",{headers: {
+    const info = await axios.get("https://e-commerce-back-end-avek.onrender.com/products",{headers: {
       Authorization: window.localStorage.getItem("mytoken")
     }
   })
     setproducts(info.data)
   }
   const deleteproduct=async(values)=>{
-    await axios.post("http://localhost:3000/remove-product",values,{headers: {
+    await axios.post("https://e-commerce-back-end-avek.onrender.com/remove-product",values,{headers: {
       Authorization: window.localStorage.getItem("mytoken")}
     })
   }

@@ -21,7 +21,7 @@ function Sellerform() {
          return error
     },
       onSubmit:async(values)=>{
-          await axios.post("http://localhost:3000/add-seller",values,{headers: {
+          await axios.post("https://e-commerce-back-end-avek.onrender.com/add-seller",values,{headers: {
               Authorization: window.localStorage.getItem("mytoken")}
             })
        navigate('/adminpage')   
