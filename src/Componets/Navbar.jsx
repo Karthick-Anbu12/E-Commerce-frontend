@@ -13,7 +13,7 @@ function Navbar() {
                         <Link to='/' className='me-5 weblogo fs-4 ' >Shop Sphere
                         </Link>
                         <form className='d-flex col-lg-5' >
-                            <Link to='searchpage' className='col-lg-11 Card'  onKeyDown={methodSearch}><input type="text" className='form-control' placeholder='Search . . . .' onChange={e => setsearch(e.target.value) }/></Link>
+                            <Link to='searchpage' className='col-lg-11 Card'  onKeyUp={methodSearch}><input type="text" className='form-control' placeholder='Search . . . .' onChange={e => setsearch(e.target.value) }/></Link>
                         </form>
                         <Link to='/' className='hometext fs-6 me-2' >Homepage
                         </Link>

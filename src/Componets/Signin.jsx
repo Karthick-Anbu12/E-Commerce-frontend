@@ -16,7 +16,8 @@ function Signin() {
                 state: "",
                 pincode: ""
             },
-            cart: []
+            cart: [],
+            total:0
         },
         validate: (values) => {
             let error = {};

@@ -32,7 +32,7 @@ function Shoppingcart() {
               </ul>
               <hr />
               <div className='text-end'><h4>Subtotal: <span>
-              </span>$ {total}</h4>
+              </span>$ {total.toFixed(2)}</h4>
               </div>
             </div>
             <div className=' text-center mt-5 col-lg-3 border border-dark rounded' >

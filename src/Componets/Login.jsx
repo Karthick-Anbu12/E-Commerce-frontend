@@ -35,16 +35,17 @@ function Login() {
                    getuser()
                   
                 }
+              
             } catch (error) {
-
+              
             }
 
         }
     })
     return (
         <div >
-            <div className='row bg-dark text-light'>
-                <Link className='Card fs-2 text-light ms-3 p-2'to='/'>Homepage</Link>
+            <div className= 'bg-dark text-light'>
+                <Link className='Card fs-1 ms-3 text-light p-4'to='/'>Homepage</Link>
 
             </div>
         <div className='d-flex justify-content-center cont p-5 '>

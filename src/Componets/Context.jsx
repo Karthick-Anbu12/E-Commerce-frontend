@@ -17,7 +17,6 @@ export const UserProvider = ({ children }) => {
     setdatas(product.data)
   }
   const methodSearch = () => {
-    console.log("function")
     if (search === "") {
       return setproduct([])
     }
@@ -43,10 +42,27 @@ export const UserProvider = ({ children }) => {
     }
   }
   const removeitem = async (index) => {
+    if(cart.length==0||total<0)
+     {
+      
+      cart.splice(index, 1)
+      setcart([...cart])
+      settotal(0)
+      try {
+        await axios.post("http://localhost:3000/removefromcart", cart, {
+          headers: {
+            Authorization: window.localStorage.getItem("mytoken")
+          }
+        })
+      } catch (error) {
+        console.log("Someting went wrong")
+      } 
+     
+     }
+     else{
     settotal(total - cart[index].price)
     cart.splice(index, 1)
     setcart([...cart])
-
     try {
       await axios.post("http://localhost:3000/removefromcart", cart, {
         headers: {
@@ -57,6 +73,7 @@ export const UserProvider = ({ children }) => {
       console.log("Someting went wrong")
     }
   }
+  }
   const getuser = async () => {
     const users = await axios.get("http://localhost:3000/user-info", {
       headers: {
@@ -65,6 +82,8 @@ export const UserProvider = ({ children }) => {
     })
     setuser(users.data)
     setcart(users.data.cart)
+    settotal(users.data.total)
+    console.log(total)
   }
   useEffect(() => {
     getuser()
