@@ -9,6 +9,7 @@ function Signin() {
             username: "",
             email: "",
             password: "",
+            number:"",
             address: {
                 addressline1: "",
                 addressline2: "",
@@ -23,6 +24,9 @@ function Signin() {
             let error = {};
             if (values.username == "" ||values.username.length<=2) {
                 error.username = "Please enter valid username "
+            }
+            if (values.number == "" ||values.number>9999999999||values.number<1000000000) {
+                error.number = "Please enter valid phone number "
             }
             if (values.email == "" || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
                 error.email = "Please enter valid Email "
@@ -65,50 +69,56 @@ function Signin() {
                     <form className='container' onSubmit={formik.handleSubmit}>
                         <div className="form-group row mb-3">
                             <label for="name" className="col-sm-3 col-form-label">Name</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="name" placeholder="Username" name='username' value={formik.values.username} onChange={formik.handleChange} className={`form-control ${formik.errors.username && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.username}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
+                            <label for="inputEmail3" className="col-sm-3 col-form-label">Mobile no</label>
+                            <div className="col-sm-8 text-start">
+                                <input type="number" id="inputEmail3" placeholder="Contact number" name='number' value={formik.values.number} onChange={formik.handleChange} className={`form-control ${formik.errors.number && 'is-invalid'}`} /><span className='text-start'style={{ color: 'red' }}>{formik.errors.number}</span>
+                            </div>
+                        </div>
+                        <div className="form-group row mb-3">
                             <label for="inputEmail3" className="col-sm-3 col-form-label">Email</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="email" id="inputEmail3" placeholder="Email" name='email' value={formik.values.email} onChange={formik.handleChange} className={`form-control ${formik.errors.email && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.email}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="inputPassword3" className="col-sm-3 col-form-label">Password</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="password" id="inputPassword3" placeholder="Password" name='password' value={formik.values.password} onChange={formik.handleChange} className={`form-control ${formik.errors.password && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.password}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="address1" className="col-sm-3 col-form-label">Address 1</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="address1" placeholder="Door number" name='address.addressline1' value={formik.values.address.addressline1} onChange={formik.handleChange} className={`form-control ${formik.errors.addressline1 && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.addressline1}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="address2" className="col-sm-3 col-form-label">Address 2
                             </label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="address2" placeholder="Apartment, studio, or floor" name='address.addressline2' value={formik.values.address.addressline2} onChange={formik.handleChange} className={`form-control ${formik.errors.addressline2 && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.addressline2}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="city" className="col-sm-3 col-form-label">City</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="city" placeholder="City" name='address.city' value={formik.values.address.city} onChange={formik.handleChange} className={`form-control ${formik.errors.city && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.city}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="state" className="col-sm-3 col-form-label">State</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="state" placeholder="state" name='address.state' value={formik.values.address.state} onChange={formik.handleChange} className={`form-control ${formik.errors.state && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.state}</span>
                             </div>
                         </div>
                         <div className="form-group row mb-3">
                             <label for="pincode" className="col-sm-3 col-form-label">Pincode</label>
-                            <div className="col-sm-8">
+                            <div className="col-sm-8 text-start">
                                 <input type="text" id="pincode" placeholder="Pincode" name='address.pincode' value={formik.values.address.pincode} onChange={formik.handleChange} className={`form-control ${formik.errors.pincode && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.pincode}</span>
                             </div>
                         </div>

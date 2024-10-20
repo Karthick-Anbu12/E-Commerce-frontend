@@ -72,13 +72,13 @@
     background-color:rgba(255, 255, 255,0.75);
     box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
     z-index: 1;} 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: hsl(0, 7%, 86%);}
 .dropdown:hover .dropdown-content {display: block;}
 
 .admin{
     margin-top: 150px;
     height: 25rem;
-    width: 25rem;
+    width: 35rem;
 }
 .adminnav{
     width: 300px;

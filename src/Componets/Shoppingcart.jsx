@@ -1,9 +1,10 @@
 import React from 'react'
 import { useContext, useState, useEffect } from 'react'
 import context from './Context'
+import axios from 'axios'
 
 function Shoppingcart() {
-  const { cart, total, removeitem } = useContext(context)
+  const { cart, total, removeitem,checkout } = useContext(context)
 
 
   return (
@@ -37,9 +38,9 @@ function Shoppingcart() {
             </div>
             <div className=' text-center mt-5 col-lg-3 border border-dark rounded' >
               <h5 className='mt-1'>Pay Via</h5>
-              <img src="https://miro.medium.com/v2/resize:fit:1000/0*BIy_CblCTVoOl5Zg" className=' col-lg-10 rounded-2 mt-2' alt="" />
+              <img src="https://miro.medium.com/v2/resize:fit:1000/0*BIy_CblCTVoOl5Zg" style={{ width:"18rem",height:'10rem'}} className=' col-lg-11 rounded-2 mt-2' alt="" />
 
-              <button className='btn btn-warning rounded-pill m-2'>Proceed to Checkout</button>
+              <button className='btn btn-warning rounded-pill m-2' onClick={()=>checkout()}>Proceed to Checkout</button>
             </div>
           </div>
         }
