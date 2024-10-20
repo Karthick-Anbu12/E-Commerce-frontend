@@ -64,7 +64,7 @@ function Login() {
                             </div>
                             <div className="row mb-3">
                                 <div className="col-sm-10 text-start">
-                                    <input type="password" id="inputPassword3" placeholder='Passwaord' name="password" value={formik.values.password} onChange={formik.handleChange} className={`form-control ${formik.errors.password && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.password}</span>
+                                    <input type="password" id="inputPassword3" placeholder='Password' name="password" value={formik.values.password} onChange={formik.handleChange} className={`form-control ${formik.errors.password && 'is-invalid'}`} /><span style={{ color: 'red' }}>{formik.errors.password}</span>
                                 </div>
                             </div>
                             <button type="submit" className='btn btn-primary me-5' >Login</button>
