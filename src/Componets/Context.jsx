@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
       }
     })
     setproduct(filterbysearch)
-    console.log(product)
+
   }
   const additem = async (data) => {
     if (!isLoggedIn) {
@@ -39,7 +39,6 @@ export const UserProvider = ({ children }) => {
         }
       })
       setcart([...cart, data])
-      console.log([...cart, data])
      settotal((prevTotal) => prevTotal + data.price);
      const currentTotal = total + data.price;
      await axios.post("https://e-commerce-back-end-avek.onrender.com/total",{ total: currentTotal }, {
@@ -104,9 +103,8 @@ export const UserProvider = ({ children }) => {
         description: "Test Transaction",
         handler: async function (response) {
           if (response.razorpay_payment_id) {
-            console.log(response.razorpay_payment_id,cart,total)
-            console.log(setcart([]))
-            console.log(settotal(0))
+            setcart([])
+          settotal(0)
             await axios.post("https://e-commerce-back-end-avek.onrender.com/after-checkout", cart, {
               headers: {
                 Authorization: window.localStorage.getItem("mytoken")

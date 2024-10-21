@@ -31,7 +31,6 @@ function Productsform() {
              return error
         },
         onSubmit:async(values)=>{
-            console.log(values)
             await axios.post("https://e-commerce-back-end-avek.onrender.com/add-product",values,{headers: {
                 Authorization: window.localStorage.getItem("mytoken")}
               })

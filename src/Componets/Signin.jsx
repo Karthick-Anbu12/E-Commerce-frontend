@@ -52,7 +52,6 @@ function Signin() {
             return error
         },
         onSubmit: async (values) => {
-            console.log(values)
             await axios.post("https://e-commerce-back-end-avek.onrender.com/user-create", values)
             navigate('/login')
         }
