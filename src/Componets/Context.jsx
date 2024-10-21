@@ -103,6 +103,7 @@ export const UserProvider = ({ children }) => {
         description: "Test Transaction",
         handler: async function (response) {
           if (response.razorpay_payment_id) {
+            alert("Order Placed")
             setcart([])
           settotal(0)
             await axios.post("https://e-commerce-back-end-avek.onrender.com/after-checkout", cart, {
