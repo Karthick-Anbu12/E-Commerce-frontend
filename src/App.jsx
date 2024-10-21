@@ -15,6 +15,7 @@ import Searchpage from './Componets/Searchpage'
 import Productsform from './Componets/Productsform'
 import Adminlogin from './Componets/Adminlogin'
 import Sellerform from './Componets/Sellerform'
+
 function App() {
   return (
     <UserProvider>
@@ -35,7 +36,6 @@ function App() {
             <Route index element={<Productinformation />}></Route>
             <Route path='product-form' element={<Productsform/>}></Route>
             <Route path='seller' element={<Seller/>}></Route>
-            
           </Route>
         </Routes>
       </BrowserRouter>
