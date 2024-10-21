@@ -1,12 +1,14 @@
 import React from 'react'
 import { useContext} from 'react'
 import context from './Context'
+import { Link } from 'react-router-dom'
 
 function Shoppingcart() {
   const { cart, total, removeitem, checkout, isLoggedIn} = useContext(context)
   return (
     <div className='background shoppingcart'>
       <div className='container '>
+        <Link  to='/'className='btn btn-outline-primary mt-2 rounded rounded-pill '>Continue Shopping</Link>
         {
           <div className='row'>
             <div className='mt-5 col-lg-9'>
