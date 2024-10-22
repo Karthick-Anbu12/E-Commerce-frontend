@@ -35,7 +35,7 @@ function Productinformation() {
                  <h6>$ {product.price}</h6>
                 </div>
                 <div className='text-end mt-5'>
-                  <button className='btn btn-primary'>Edit</button>
+
                   <button className='btn btn-danger ms-2' onClick={()=>deleteproduct(product)}>Delete</button>
                 </div>
 

@@ -35,7 +35,6 @@ function Seller() {
                  <h6>{seller.productType}</h6>
                 </div>
                 <div className='text-end mt-5'>
-                  <button className='btn btn-primary'>Edit</button>
                   <button className='btn btn-danger ms-2' onClick={()=>deleteseller(seller)}>Delete</button>
                 </div>
 
